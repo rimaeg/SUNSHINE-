@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heart Belongs to You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 50%, #fbb6b9 100%);
+            min-height: 100vh;
+        }
+        
+        .heart {
+            animation: heartbeat 1.5s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .memory-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .memory-card:hover {
+            transform: translateY(-5px) rotate(2deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .love-letter {
+            background: linear-gradient(145deg, #ffffff, #f8f4f4);
+            box-shadow: 20px 20px 60px #d9d6d6, -20px -20px 60px #ffffff;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-pink-50 bg-opacity-90 backdrop-blur-sm fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-rose-600 font-playfair">My Love</div>
+                <div class="space-x-6">
+                    <button onclick="scrollToSection('hero')" class="text-rose-600 hover:text-rose-800 transition-colors">Home</button>
+                    <button onclick="scrollToSection('memories')" class="text-rose-600 hover:text-rose-800 transition-colors">Memories</button>
+                    <button onclick="scrollToSection('letter')" class="text-rose-600 hover:text-rose-800 transition-colors">Love Letter</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Hero Section -->
+<section id="hero" class="min-h-screen flex items-center justify-center pt-20">
+  <div class="container mx-auto px-4 text-center">
+    <div class="relative mb-8">
+      <!-- Your local image styled with Tailwind -->
+      <img src="IMG_20250811_111637.jpg" 
+           alt="B+R hands" 
+           class="mx-auto w-80 md:w-[28rem] rounded-2xl shadow-2xl border-4 border-rose-200 transform hover:scale-105 transition duration-500 ease-in-out" />
+      
+      <!-- Floating heart -->
+      <div class="heart absolute top-4 right-4 text-6xl text-rose-600 animate-bounce">❤️</div>
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 text-rose-700 font-playfair fade-in">
+      My Heart Belongs to You
+    </h1>
+
+    <p class="text-xl md:text-2xl mb-8 text-gray-700 italic fade-in">
+      "In your smile I see something more beautiful than the stars."
+    </p>
+
+    <div class="floating">
+      <button onclick="scrollToSection('letter')" 
+              class="bg-rose-600 hover:bg-rose-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+        Read My Love Letter
+      </button>
+    </div>
+  </div>
+</section>
+
+    <!-- Why I Love You -->
+    <section class="py-20 bg-white bg-opacity-80">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-rose-700 font-playfair">Reasons Why I Love You</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reason 1 -->
+                <div class="text-center p-6 rounded-xl bg-pink-50 hover:bg-pink-100 transition-colors">
+                    <div class="text-4xl mb-4 text-rose-600">✨</div>
+                    <h3 class="text-2xl font-semibold mb-3">Your Beautiful Smile</h3>
+                    <p class="text-gray-700">The way your eyes light up when you smile could brighten even the darkest day.</p>
+                </div>
+                
+                <!-- Reason 2 -->
+                <div class="text-center p-6 rounded-xl bg-pink-50 hover:bg-pink-100 transition-colors">
+                    <div class="text-4xl mb-4 text-rose-600">💕</div>
+                    <h3 class="text-2xl font-semibold mb-3">Your Kind Heart</h3>
+                    <p class="text-gray-700">You might think you dont have one, but i see you and you have a very kind heart.</p>
+                </div>
+                
+                <!-- Reason 3 -->
+                <div class="text-center p-6 rounded-xl bg-pink-50 hover:bg-pink-100 transition-colors">
+                    <div class="text-4xl mb-4 text-rose-600">🌟</div>
+                    <h3 class="text-2xl font-semibold mb-3">Your Strength</h3>
+                    <p class="text-gray-700">The way you face challenges amazes me, and the way you always come out ontop of everything… it's inspiring.</p>
+                </div>
+                
+                <!-- Reason 4 -->
+                <div class="text-center p-6 rounded-xl bg-pink-50 hover:bg-pink-100 transition-colors">
+                    <div class="text-4xl mb-4 text-rose-600">🎯</div>
+                    <h3 class="text-2xl font-semibold mb-3">Your Passion</h3>
+                    <p class="text-gray-700">I love how passionate you are with the things and people you love.</p>
+                </div>
+                
+                <!-- Reason 5 -->
+                <div class="text-center p-6 rounded-xl bg-pink-50 hover:bg-pink-100 transition-colors">
+                    <div class="text-4xl mb-4 text-rose-600">🤗</div>
+                    <h3 class="text-2xl font-semibold mb-3">Your Warm Embrace</h3>
+                    <p class="text-gray-700">There's no place I'd rather be than wrapped in your loving arms.</p>
+                </div>
+                
+                <!-- Reason 6 -->
+                <div class="text-center p-6 rounded-xl bg-pink-50 hover:bg-pink-100 transition-colors">
+                    <div class="text-4xl mb-4 text-rose-600">🎵</div>
+                    <h3 class="text-2xl font-semibold mb-3">Your Laughter</h3>
+                    <p class="text-gray-700">Your laughter is my favorite melody - it fills my heart with so much joy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Our Memories Section -->
+<section id="memories" class="py-20 bg-rose-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-rose-700 mb-12 font-playfair">Our Memories</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <img src="IMG-20250708-WA1232.jpg" class="w-full h-64 object-cover" alt="My image">
+        <div class="p-6">
+          <p class="italic text-gray-600">"Every smile with you is a memory etched in my soul, I'd give anything to make you smile."</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <img src="IMG-20250716-WA0278.jpg" class="w-full h-64 object-cover" alt="My image">
+        <div class="p-6">
+          <p class="italic text-gray-600">"Remember when we took this? Flower picking is one of my favorite things to do with you."</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <img src="Snapchat-1634135054.jpg" class="w-full h-64 object-cover" alt="Snapchat image">
+        <div class="p-6">
+          <p class="italic text-gray-600">"With you, every place feels like home, it's more than an honor to love you."</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+    <!-- Love Letter -->
+    <section id="letter" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="love-letter rounded-3xl p-8 md:p-12">
+                    <h2 class="text-4xl font-bold text-center mb-8 text-rose-700 font-playfair">MY GIRLFRIEND</h2>
+                    
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                        <p>Hey sunshine,</p>
+                        
+                        <p>From the moment our paths re-crossed, my life has been filled with colors I never knew existed. Your smile has become my sunshine, your laughter my favorite melody, and your presence my greatest comfort.</p>
+                        
+                        <p>I love the way your eyes light up when you joke and play around me. I admire your beauty, warmth and caring nature. I cherish every moment we spend together, whether we're goofing around or you're watching me craze out or we're watching a movie/tiktoks or we're laughing until we cry or sitting in comfortable silence.</p>
+                        
+                        <p>You've shown me what real love means - it's in the small things: the way you smile at me, call me baby, eat with me, send me snaps, and the way you hold my hand when we walk together, even the way you go out of your way to make changes that are hard for you just for us.</p>
+                        
+                        <p>Every day with you is a blessing I don't take for granted. You make me want to be a better person, to dream bigger, and to love deeper.</p>
+                        
+                        <p>I promise to always cherish you, to support your dreams, to be your shoulder to lean on, and to love you more with each passing day and for as long as you'd let me.</p>
+                        
+                        <p class="text-2xl text-rose-600 font-semibold text-center mt-8">Forever yours,</p>
+                        <p class="text-xl text-center">[Tu novia]</p>
+                    </div>
+                    
+                    <div class="text-center mt-8">
+                        <button onclick="addHeart()" class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full transition-all transform hover:scale-105">
+                            ❤️ Send Love
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Hearts Container -->
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none z-40 overflow-hidden"></div>
+
+    <!-- Footer -->
+    <footer class="bg-rose-700 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xl mb-4">Made with 💖 for the most amazing woman in my life</p>
+            <p class="text-sm opacity-80">Every day with you is a blessing</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function addHeart() {
+            const heartsContainer = document.getElementById('hearts-container');
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'absolute text-2xl text-rose-600 animate-bounce';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            
+            heartsContainer.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        
+        // Add some initial hearts
+        for (let i = 0; i < 5; i++) {
+            setTimeout(addHeart, i * 1000);
+        }
+        
+        // Add scroll animation
+        document.querySelectorAll('.fade-in').forEach((element, index) => {
+            element.style.animationDelay = (index * 0.2) + 's';
+        });
+        
+        // Add click hearts to navigation
+        document.querySelectorAll('nav button').forEach(button => {
+            button.addEventListener('click', () => {
+                addHeart();
+            });
+        });
+    </script>
+</body>
+</html>
+
